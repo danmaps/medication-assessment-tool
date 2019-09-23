@@ -10,6 +10,7 @@ output:
 ## Usage:
 on your macbook, install https://docs.conda.io/en/latest/miniconda.html
 
+### install dependencies
 in terminal run:
 
 ```pip install docx```
@@ -17,3 +18,9 @@ in terminal run:
 ```pip install docxtpl```
 
 ```pip install docxcompose```
+
+### to generate mats:
+1. add medication info to `mats.xlsx`
+2. save `mats.xlsx`
+3. double click on automation/make_mats.command
+4. look for output in `MATs.docx`
