@@ -1,14 +1,11 @@
 # medication-assessment-tool
 generate mats from excel
 
-input:
-![image](https://user-images.githubusercontent.com/10421813/65465408-1171ed00-de11-11e9-9dbe-125ce1560676.png)
+![image](https://user-images.githubusercontent.com/10421813/65466972-1b95ea80-de15-11e9-9432-9b70c2698d8e.png)
 
-output:
-![image](https://user-images.githubusercontent.com/10421813/65465333-d66fb980-de10-11e9-9d55-7ea6ffda496a.png)
 
 ## Usage:
-on your macbook, install https://docs.conda.io/en/latest/miniconda.html
+on your macbook, install python using miniconda https://docs.conda.io/en/latest/miniconda.html
 
 ### install dependencies
 in terminal run:
@@ -18,6 +15,8 @@ in terminal run:
 ```pip install docxtpl```
 
 ```pip install docxcompose```
+
+```pip install openpyxl```
 
 ### to generate mats:
 1. add medication info to `mats.xlsx`
