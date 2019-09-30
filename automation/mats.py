@@ -13,13 +13,13 @@ import os
 # In[2]:
 
 
-# basic test based on https://docxtpl.readthedocs.io/
-##
 def use_template(template, newfilename, context):
     doc = DocxTemplate(template)
     doc.render(context)
     doc.save(newfilename)
 
+
+# basic test based on https://docxtpl.readthedocs.io/
 
 # template = r"docxtpl.docx" # contains only "{{ tag }}"
 # newfilename = "generated_doc.docx"
@@ -72,29 +72,30 @@ def parse_excel_data(in_file):
 
 
 # In[4]:
-context = {'medication': '',
-       'ref': '',
-       'class_t': '',
-       'class_P': '',   
-       'safe_dose': '',
-       'action': '',
-       'indication': '',
-       'assessments': '',
-       'contraindictations': '',
-       'side_effects': '',
-       'education': '',
-       'rate_of_admin': '',
-       'dilution': '',
-      }
+context = {
+    "medication": "",
+    "ref": "",
+    "class_t": "",
+    "class_P": "",
+    "safe_dose": "",
+    "action": "",
+    "indication": "",
+    "assessments": "",
+    "contraindictations": "",
+    "side_effects": "",
+    "education": "",
+    "rate_of_admin": "",
+    "dilution": "",
+}
 
 outputs = []
-for med in parse_excel_data(os.path.join("..","mats.xlsx")):
+for med in parse_excel_data(os.path.join("..", "mats.xlsx")):
     for col in med:
-        if med[col] != None:
-            context[col]=med[col]
+        if med[col] is not None:
+            context[col] = med[col]
         else:
-            context[col]=''
-    #context = med
+            context[col] = ""
+    # context = med
     dropbox = r".."
     template = "mat_template.docx"
     output = os.path.join(dropbox, "MAT" + str(med["medication"]) + ".docx")
@@ -104,8 +105,6 @@ for med in parse_excel_data(os.path.join("..","mats.xlsx")):
     # print(output)
     outputs.append(output)
 ####################
-
-
 
 
 # insert page break after every 2 mats
@@ -118,14 +117,18 @@ for i in range(len(outputs) + (int(len(outputs) / 2))):
 
 
 def combine_all_docx(filename_master, files_list):
+    from datetime import datetime
+
     number_of_sections = len(files_list)
     master = Document(filename_master)
     composer = Composer(master)
     for i in range(0, number_of_sections):
         doc_temp = Document(files_list[i])
         composer.append(doc_temp)
-    composer.save(os.path.join(dropbox, "MATs.docx"))
-    print(os.path.join(dropbox, "MATs.docx"))
+    now = datetime.now().strftime("%Y%m%d-%H%M%S")
+    outputfile = os.path.join(dropbox, f"mats_{now}.docx")
+    composer.save(outputfile)
+    print(outputfile)
 
 
 # print(outputs)
