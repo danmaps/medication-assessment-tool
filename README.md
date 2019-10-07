@@ -1,8 +1,7 @@
 # medication-assessment-tool
 generate mats from excel
 
-![image](https://user-images.githubusercontent.com/10421813/65466972-1b95ea80-de15-11e9-9432-9b70c2698d8e.png)
-
+<img src="https://user-images.githubusercontent.com/10421813/66350898-4aca5280-e911-11e9-9c84-fadede94a64d.png" width="200"/>
 
 ## Usage:
 on your macbook, install python using miniconda https://docs.conda.io/en/latest/miniconda.html
@@ -23,3 +22,5 @@ in terminal run:
 2. save `mats.xlsx`
 3. double click on automation/make_mats.command
 4. look for output in `MATs.docx`
+
+![image](https://user-images.githubusercontent.com/10421813/65466972-1b95ea80-de15-11e9-9432-9b70c2698d8e.png)
