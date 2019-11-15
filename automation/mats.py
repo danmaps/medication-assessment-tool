@@ -9,6 +9,7 @@ from docxtpl import DocxTemplate
 from docxcompose.composer import Composer
 from openpyxl import load_workbook
 import os
+import re
 
 # In[2]:
 
@@ -82,7 +83,8 @@ for med in parse_excel_data(os.path.join("..", "mats.xlsx")):
             context[col] = med[col]
         else:
             context[col] = ""
-    output = os.path.join(r"..", "MAT" + str(med["medication"]) + ".docx")
+    med_sanitized = re.sub('[^0-9a-zA-Z]+', '', med["medication"])
+    output = os.path.join(r"..", "MAT" + str(med_sanitized) + ".docx")
 
     make_docx("mat_template.docx", output, context)
     outputs.append(output)
