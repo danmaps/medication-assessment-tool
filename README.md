@@ -2,7 +2,8 @@
 
 
 # medication-assessment-tool
-generate mats from excel
+save time, generate mats from excel
+we'll get through this RN program, together!
 
 ## Usage:
 on your macbook, install python using miniconda https://docs.conda.io/en/latest/miniconda.html
