@@ -11,13 +11,13 @@ on your macbook, install python using miniconda https://docs.conda.io/en/latest/
 ### install dependencies
 in terminal run:
 
-```pip install docx```
+```python3 -mpip install --user docx```
 
-```pip install docxtpl```
+```python3 -mpip install --user docxtpl```
 
-```pip install docxcompose```
+```python3 -mpip install --user docxcompose```
 
-```pip install openpyxl```
+```python3 -mpip install --user openpyxl```
 
 ### to generate mats:
 1. add medication info to `mats.xlsx`
@@ -27,4 +27,4 @@ in terminal run:
 
 ![image](https://user-images.githubusercontent.com/10421813/65466972-1b95ea80-de15-11e9-9432-9b70c2698d8e.png)
 
-<div>Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></div>
+<div>Icon by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></div>
