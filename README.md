@@ -3,7 +3,7 @@
 
 # medication-assessment-tool
 save time, generate mats from excel<br>
-we'll get through this RN program, together!
+created for Emily when she was tasked with delivering medication information via a complicated `.docx` format.<br>
 
 ## Usage:
 on your macbook, install python using miniconda https://docs.conda.io/en/latest/miniconda.html
