@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 from docx import Document
 from docxtpl import DocxTemplate
 from docxcompose.composer import Composer
@@ -11,17 +8,10 @@ from openpyxl import load_workbook
 import os
 import re
 
-# In[2]:
-
-
 def make_docx(template, newfilename, context):
     doc = DocxTemplate(template)
     doc.render(context)
     doc.save(newfilename)
-
-
-# In[3]:
-
 
 def parse_excel_data(in_file):
     """Parses excel spreadsheet.
@@ -38,10 +28,6 @@ def parse_excel_data(in_file):
     ]
     return dictlist
 
-
-# In[5]:
-
-
 def combine_all_docx(filename_master, files_list):
     from datetime import datetime
 
@@ -55,10 +41,6 @@ def combine_all_docx(filename_master, files_list):
     outputfile = os.path.join(r"..", f"mats_{now}.docx")
     composer.save(outputfile)
     print(outputfile)
-
-
-# In[4]:
-
 
 context = {
     "medication": "",
