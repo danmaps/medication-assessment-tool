@@ -3,7 +3,7 @@
 
 # medication-assessment-tool
 save time, generate mats from excel<br>
-created for Emily when she was tasked with delivering medication information via a complicated `.docx` format.<br>
+created for Emily when she was tasked with tediously collating medication information in a complicated `.docx` format for a few classes in nursing school.<br>
 
 ## Usage:
 on your macbook, install python using miniconda https://docs.conda.io/en/latest/miniconda.html
